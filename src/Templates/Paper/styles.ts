@@ -6,4 +6,6 @@ export const Container = styled.div`
   padding: 0px;
   background: var(--primary);
   display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
