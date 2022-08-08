@@ -19,4 +19,14 @@ export const Form = styled.div`
   align-items: center;
 `;
 
-export const TitleForm = styled.h1``;
+export const TitleForm = styled.h1`
+  color: var(--text);
+  margin-top: 70px;
+`;
+
+export const RegisterButton = styled.a`
+  margin-top: 7px;
+  margin-left: 50%;
+  color: var(--link);
+  cursor: pointer;
+`;

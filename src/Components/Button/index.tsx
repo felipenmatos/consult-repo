@@ -1,6 +1,10 @@
 import React from "react";
 import { Container } from "./styles";
 
-export const Button = () => {
-  return <Container></Container>;
+type IButton = {
+  name: string;
+};
+
+export const Button = ({ name }: IButton) => {
+  return <Container>{name}</Container>;
 };
