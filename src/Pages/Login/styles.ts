@@ -30,3 +30,29 @@ export const RegisterButton = styled.a`
   color: var(--link);
   cursor: pointer;
 `;
+
+export const InputLogin = styled.input`
+  width: 315px;
+  height: 40px;
+  margin-top: 50px;
+  border: none;
+  color: #ffffff;
+  background-color: var(--primary);
+  text-align: center;
+  border-radius: 100px;
+  outline: 0px;
+`;
+
+export const Button = styled.button`
+  width: 180px;
+  height: 40px;
+  margin-top: 40px;
+  color: var(--primary);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 29px;
+  text-align: center;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+`;
