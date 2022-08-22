@@ -11,6 +11,20 @@ export function Home() {
         <Icon src={logo} />
         <ButtonMenu />
       </HeaderHome>
+      <Body>
+        <InputSearch placeholder="Busca por repositórios" />
+        <Form>
+          <FormDiv>
+            <DivLi>
+              <Li></Li>
+              <ContainerStar>
+                <IconStar />
+                <TextStar>Star</TextStar>
+              </ContainerStar>
+            </DivLi>
+          </FormDiv>
+        </Form>
+      </Body>
     </Paper>
   );
 }
@@ -34,3 +48,37 @@ const ButtonMenu = styled.button`
   border: none;
   cursor: pointer;
 `;
+
+const Body = styled.div``;
+
+const InputSearch = styled.input`
+  width: 533px;
+  height: 32px;
+
+  border-radius: 100px;
+  background-color: var(--secundary);
+  padding: 20px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 48px;
+  color: var(--text);
+
+  outline: 0;
+  border: none;
+`;
+
+const Form = styled.div``;
+
+const FormDiv = styled.div``;
+
+const DivLi = styled.div``;
+
+const Li = styled.h2``;
+
+const ContainerStar = styled.div``;
+
+const TextStar = styled.p``;
+
+const IconStar = styled.img``;
