@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import UseState from "./Context/state";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import RouterPages from "./Router/RouterPages";
@@ -9,7 +10,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterPages />
+    <UseState>
+      <RouterPages />
+    </UseState>
   </React.StrictMode>
 );
 

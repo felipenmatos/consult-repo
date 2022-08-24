@@ -8,7 +8,7 @@ function RouterPages() {
     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/ListRepo" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
       </Routes>
     </Router>
   );
