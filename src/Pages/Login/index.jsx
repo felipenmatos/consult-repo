@@ -6,24 +6,26 @@ import { useNavigate } from "react-router-dom";
 import { useHook } from "../../Context/state";
 
 export function Login() {
-  const [nickname, setNickname] = useState("");
   const { userContext } = useHook();
-  const { repos, setRepos } = userContext;
+  const { nameUser, setNameUser } = userContext;
   const [error, setError] = useState(false);
   const navigate = useNavigate();
 
   function handleClick() {
-    if (nickname.length > 5) {
-      fetch(`https://api.github.com/users/${nickname}/repos`)
-        .then((response) => response.json())
-        .then((data) => setRepos(data));
+    if (nameUser.length > 5) {
+      fetch(`https://api.github.com/users/${nameUser}/repos`).then(
+        (response) => {
+          response.json();
+          console.log(response);
+        }
+      );
       navigate("/Home");
     } else {
       setError(true);
     }
   }
 
-  console.log(repos);
+  console.log(nameUser);
 
   return (
     <Paper>
@@ -32,8 +34,8 @@ export function Login() {
         <TitleForm>Login</TitleForm>
         <InputLogin
           placeholder="Digite o nome de usuário"
-          value={nickname}
-          onChange={(e) => setNickname(e.target.value)}
+          value={nameUser}
+          onChange={(e) => setNameUser(e.target.value)}
         />
 
         <RegisterButton>Cadastre-se</RegisterButton>
